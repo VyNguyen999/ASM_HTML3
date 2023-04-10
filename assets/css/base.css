@@ -1,0 +1,77 @@
+:root {
+    --text-color: #333;
+    --white-color: #fff;
+    --black-color: #000;
+    --main-color: #b19361;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    box-sizing: border-box;
+}
+
+.product-body-name:hover,
+.text-hover:hover {
+    cursor: pointer;
+    color: #b19361;
+    transition: 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.hover-img {
+    position: relative;
+}
+
+.hover-img::after {
+    position: absolute;
+    content: "";
+    background: rgba(255,255,255,.6);
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    top: 50%;
+    opacity: 1;
+    width: 0;
+}
+
+.hover-img:hover::after {
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    width: auto;
+    transition: all .95s linear;
+}
+
+.hover-img::before {
+    position: absolute;
+    background: rgba(255,255,255,.3);
+    content: "";
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    opacity: 1;
+    width: 0;
+}
+
+.hover-img:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    width: auto;
+    transition: all .95s linear;
+}
